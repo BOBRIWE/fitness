@@ -1,0 +1,20 @@
+@import '../../stylesheets/scss/vendors/variables',
+        '../../stylesheets/scss/vendors/mixins';
+
+.feature {
+    color: #ffffff;
+    h2 {
+        @include font(400, 24px, $myriadPro);
+    }
+    p{
+        @include font(400, 14px, $myriadPro);
+        line-height: 1.714;
+        text-align: left;
+    }
+    span {
+        @include font(400, 14px, $myriadPro);
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

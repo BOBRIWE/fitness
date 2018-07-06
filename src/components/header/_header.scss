@@ -1,0 +1,29 @@
+@import '../../stylesheets/scss/vendors/variables',
+        '../../stylesheets/scss/vendors/mixins';
+
+header {
+    height: 47px;
+    position: absolute;
+    div.logo {
+        background: url('../images/logo.png');
+        height: 100%;
+        width: 151px;
+        float: left;
+    }
+    nav {
+        float: right;
+        height: 100%;
+        div {
+            display: inline-block;
+            height: 100%;
+            padding: 14.5px 30px;
+
+            @include font(700, 13px, $avenirNext);
+            color: #ffffff;
+            text-transform: uppercase;
+            &:hover {
+                background: rgba(255, 255, 255, 0.4);
+            }
+        }
+    }
+}

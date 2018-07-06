@@ -1,0 +1,126 @@
+@import '../../stylesheets/scss/vendors/variables',
+        '../../stylesheets/scss/vendors/mixins';
+
+.cell {
+    position: relative;
+    overflow: hidden;
+    color: #ffffff;
+    background: #ffffff;
+    min-height: 394px;
+    img.big {
+        height: 394px;
+        width: 100%;
+        object-fit: cover;
+    }
+    h3.sub-header {
+        @include font(700, 14px, $myriadPro);
+        color: #fd634e;
+        text-transform: uppercase;
+        margin-top: 88.5px;
+    }
+    h2 {
+        @include font(400, 35px, $oSans);
+        color: #a2ca28;
+        text-transform: uppercase;
+    }
+    p{
+        @include font(700, 14px, $myriadPro);
+        color: #656e74;
+        line-height: 1.857;
+        &>span {
+            color: #a2ca28;
+            text-decoration: underline;
+            white-space:nowrap;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    span.users {
+        position: absolute;
+        bottom: 3em;
+        @include font(400, 12px, $myriadPro);
+        color: #ffffff;
+        span.value {
+            color: #ffffff;
+        }
+        img {
+            margin-bottom: 5px;
+            margin-left: 10px;
+        }
+        &:hover {
+            cursor: pointer;
+            color: #f7614c;
+        }
+    }
+    .date, .tag {
+        position: absolute;
+        top: 3em;
+        color: #ffffff;
+        @include font(700, 14px, $myriadPro);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .date {
+        left: 3em;
+    }
+    .tag {
+        right: 3em;
+        img {
+            margin-left: 5px;
+        }
+    }
+    .left {
+        left: 3em;
+    }
+    .right {
+        right: 3em;
+    }
+    .hidden {
+        display: none;
+    }
+
+    .person-ico {
+        position: absolute;
+        right: 4em;
+        top: 5em;
+    }
+
+    .avocado-ico {
+        @extend .person-ico;
+        display: none;
+    }
+}
+.centered {
+    text-align: center;
+    .person-ico, .avocado-ico {
+        display: none;
+    }
+}
+.text-left {
+    text-align: left;
+    span.drop > img {
+        display: none;
+    }
+}
+.green {
+    background: #a2ca28 !important;
+    .avocado-ico {
+        display: inline-block;
+    }
+    .person-ico {
+        display: none;
+    }
+    h3.sub-header {
+        color: #ffffff;
+    }
+    h2 {
+        color: #ffffff;
+    }
+    p {
+        color: #ffffff;
+    }
+    span.big > img {
+        display: none;
+    }
+}
